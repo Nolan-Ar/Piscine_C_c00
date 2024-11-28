@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*                                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yourusername <yourusername@student.42.fr>  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 10:00:00 by yourusername     #+#    #+#              */
-/*   Updated: 2024/05/27 10:00:00 by yourusername    ###   ########.fr        */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -56,18 +44,10 @@ void	ft_print_combn(int n)
 	int	tab[10];
 	int	index;
 	int	start;
-	int	i;
 
-	i = n - 1;
 	index = 0;
 	start = 0;
-	if (n < 2 || n > 9)
+	if (n < 1 || n > 9)
 		return ;
-	tab[i] = '\0';
 	ft_print_comb_recursive(tab, n, index, start);
-}
-
-int	main(void)
-{
-	ft_print_combn(5);
 }
